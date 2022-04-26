@@ -50,7 +50,7 @@ services:
     environment:
       PMA_HOST: db
       PMA_PORT: 3306
-      MYSQL_ROOT_PASSWORD: drupal
+      MYSQL_ROOT_PASSWORD: app
     volumes:
       - ./etc/php/pma.php.ini:/usr/local/etc/php/conf.d/pma.php.ini
     depends_on:
@@ -67,10 +67,10 @@ services:
     volumes:
       - mysqldata:/var/lib/mysql
     environment:
-      MYSQL_DATABASE: drupal
-      MYSQL_ROOT_PASSWORD: drupal
-      MYSQL_USER: drupal
-      MYSQL_PASSWORD: drupal
+      MYSQL_DATABASE: app
+      MYSQL_ROOT_PASSWORD: app
+      MYSQL_USER: app
+      MYSQL_PASSWORD: app
 
 volumes:
   mysqldata:
